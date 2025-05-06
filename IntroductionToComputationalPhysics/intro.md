@@ -2,7 +2,7 @@
 
 * Physics 246, Fall 2024
 * Thursday 4:00-5:50pm CST
-* Room: Loomis 222
+* Room: Loomis 276
 * 2 credit hours
 * Course Texts: This one!
 
@@ -15,48 +15,47 @@ Here is an <a href="https://clark.physics.illinois.edu/classSummary/index.html">
 ---
 
 ### Course Logistics
- - **Lectures:** R 4:00-5:50, 222 Loomis
- - **Professor:** Bryan Clark
-    - email: bkclark@illinois.edu
-    - Office Hours: 1PM Thursday, outside ESB 2111
+ - **Lectures:** R 4:00-5:50, 276 Loomis
+ - **Professor:** Lucas Wagner
+    - email: lkwagner@illinois.edu
+    - Office Hours: Friday 3-4 PM ICMT commons (outside ESB 2131)
 
   - **TA(s):** 
-    - Matthew Thibodeau
-      - email: mt24@illinois.edu
-      - Office Hours: 3pm Monday, ESB 3110
-    - Chun Yu Chow
-      - email: cychow2@illinois.edu
-      - Office Hours, 2pm Tuesday, ESB 3137
+    - Abby Keenan
+      - email: akeenan@illinois.edu
+      - Office Hours: Monday 3-4 ICMT commons (outside ESB 2131)
+    - Surkhab Kaur
+      - email: surkhab2@illinois.edu
+      - Office Hours: Wednesday 3-4 ICMT commons (outside ESB 2131)
         
 #### Online Tools
 
 
 * **Campuswire**:  We will use campuswire as a class forum;  a way to message the course staff and each other; and to submit your attendance question.
 * **Google Colab**: On [Google Colab](colab.google.com)  you will be able to program your code in a jupyter notebook and submit it for us to grade. Please sign in to your Illinois account.  While working on the assignment, you will share each of your colab assignments with the professor and the TA (but no one else).  You can load things in google colab just by clicking on the relevant button in the notebook (looks like a shuttle).  You must then save to your google drive and it will be there later when you go to google colab!
-* **Canvas**: You will submit your projcts via Canvas, which will also contain your grades and your returned assignments. There will be two Canvas assignments per course project: one where you must submit the "Sharing" link for your Colab document containing your project solution, and another where you must submit a printout of your Colab document in .pdf format. Both submissions are required for each project to obtain credit. [Detailed submission instructions can be found here.](instructions-for-submitting-your-assignments)
-* **my.physics gradebook**: Assignment grades will also be entered here.
+* **Canvas**: You will submit your projcts via Canvas, which will also contain your grades and your returned assignments.  You must submit the "Sharing" link for your Colab document containing your project solution, and you must submit a printout of your Colab document in .pdf format. Both submissions are required for each project to obtain credit. [Detailed submission instructions can be found here.](instructions-for-submitting-your-assignments)
 
 ---
 
 ### Calendar
-(Some of these projects might swap around)
+(These are the dates that we work on the assignment in class; the assignments are due one week later)
 
 |Date   |Assignment   |
 |---|---|
-|August 29	| N Ways to Measure PI  |
-|September 5	|Dynamics   |
-|September 12	|Orbital Dynamics  |
-|September 19	|Exoplanets   |
-|September 26	|Chaos   |
-|October 3 	|Many-Body Simulations|
-|October 10	|Particle Physics    |
-|October 17	|Random Walks |
-|October 24   	|Markov Chains   |
-|October 31 	|Predator-Prey  |
-|November 7  	|Fluid Dynamics
-|November 14	| Classifying Galaxies|
-|November 21	|Fluxonium Qubits|
-|December 5| Quantum Computing  |
+|Jan 23	| N Ways to Measure PI  |
+|Jan 30	|Dynamics   |
+|Feb 6	|Orbital Dynamics  |
+|Feb 13	|Exoplanets   |
+|Feb 20	|Chaos   |
+|Feb 27 	|Particle Physics|
+|Mar 6	|Classifying Galaxies    |
+|Mar 13	|Random Walks |
+|Mar 27   	|Markov Chains   |
+|Apr 3 	|Predator-Prey  |
+|Apr 10  	|Climate Dynamics
+|Apr 17	| Fluid Dynamics |
+|Apr 24	|Quantum Computing|
+|May 1| Building a Physical Qbit  |
 
 
 ---
@@ -66,7 +65,7 @@ Here is an <a href="https://clark.physics.illinois.edu/classSummary/index.html">
 #### Computational Assignments
 The heart of this course will be a series of computational assignments.
 * You will work on the assignments both during class and as homework.
-* Each assignment is due at the beginning of the next class unless otherwise noted. If you need an extension on an assignment, please post to campuswire (only to the course staff).  We will then respond on campuswire if the extension has been given.   The following information:
+* Each assignment is due at the beginning of the next class unless otherwise noted. If you need an extension on an assignment, please email Abby and Surkhab.  We will then respond if the extension has been given.   The following information:
    * broadly why you need the extension (sick, interview, major exam in another course, etc)
    * when you will be able to submit the assignment by (this is the new official due date if the extension is granted.)
 *  Solutions to the homeworks will not be given.
@@ -77,9 +76,16 @@ The heart of this course will be a series of computational assignments.
 
 (instructions-for-submitting-your-assignments)=
 ##### Instructions for submitting your assignments
-Once you are finished working on an assignment, first make sure that it is shared with the course staff by clicking "Share" in the upper right hand corner in the Colab window and adding us via email address (bkclark@illinois.edu, mt24@illinois.edu, and cychow2@illinois.edu). Then, at the bottom of that same "Share" menu, click "Copy Link" to get the sharing link to your Colab document. Next, save a .pdf printout copy of your Colab document. This can be done by clicking "File" and then "Print," and then saving the printout as a .pdf via your operating system.
+Once you are finished working on an assignment, first make sure that it is shared with the course staff by clicking "Share" in the upper right hand corner in the Colab window and adding us via email address. Then, at the bottom of that same "Share" menu, click "Copy Link" to get the sharing link to your Colab document. Next, save a .pdf printout copy of your Colab document. This can be done by the following code
+```
+from google.colab import drive
+drive.mount('/content/drive')
+!cp /content/drive/MyDrive/Colab\ Notebooks/Dynamics.ipynb ./
+!jupyter nbconvert --to HTML "Dynamics.ipynb"
+```
+where you replace your filenames above with the appropriate ones for your assignment. Then open the HTML file in your web browser and print from there.
 
-Assignments are submitted via Canvas, which requires two simple steps. Each week, there will be two assignment submission pages availale in Canvas, one titled "[Assigment Title] (Colab link)" and one titled "[Assigment Title] (PDF file)." First, paste the aforementioned sharing link into the "... (Colab link)" assignment and then submit that assignment. Second, upload your printout .pdf file into the "... (PDF file)" assignment and then submit that assignment. 
+Assignments are submitted via Canvas, which requires two simple steps.  First, paste the aforementioned sharing link into the "... (Colab link)" section. Second, upload your printout .pdf file into the "... (PDF file)" section and then submit that assignment. 
 
 We will review both the printout and Colab code while grading your assignment, so please refrain from editing the Colab document after the submission deadline.
 
@@ -128,7 +134,7 @@ Sometimes there are typos in the assignment (although we are working hard to rem
 There is no attendance required for class (although we believe that coming to class will be helpful!)  That said, **please do not attend class if you are sick**.  In such a case, we will work with you to make sure you get caught up.  No notes for sickness, etc are required. 
 
 #### About using code you find on the web
-The quickest way to deal with the arcana of programing is to ask Google for examples of what you are seeking to accomplish. But you will need to use your judgment in doing this: the Google search “how do I use color maps in python?” is fine, while “show me a script that calculates pi” is not. And you should always credit the original source of code that you paste into your own programs in a comment that includes the URL for the original code. If an author says that his/her code is not to be copied or incorporated into your programs, then DON’T.
+The quickest way to deal with the arcana of programing is to ask Google for examples of what you are seeking to accomplish. But you will need to use your judgment in doing this: the Google search “how do I use color maps in python?” is fine, while “show me a script that calculates pi” is not. And you should always credit the original source of code that you paste into your own programs in a comment that includes the URL for the original code. If an author says that his/her code is not to be copied or incorporated into your programs, then DON'T.
 
 The goal of this course is for you to deeply understand this material. For this to work, you’ll need to write your own code.
 
